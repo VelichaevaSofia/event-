@@ -2,18 +2,28 @@ package ru.university.velichaeva.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.UUID;
 
 public class Meeting {
+    private UUID id;
     private LocalDate date;
     private String interlocutor;
     private LocalTime startTime;
     private String description;
 
-    public Meeting(LocalDate date, String interlocutor, LocalTime startTime, String description){
+    public Meeting(UUID id, LocalDate date, String interlocutor, LocalTime startTime, String description){
+        this.id = id;
         this.date = date;
         this.interlocutor = interlocutor;
         this.startTime = startTime;
         this.description = description;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public LocalDate getDate(){

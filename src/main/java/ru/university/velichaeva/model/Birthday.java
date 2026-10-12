@@ -2,20 +2,30 @@ package ru.university.velichaeva.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.UUID;
 
 public class Birthday {
+    private UUID id;
     private LocalDate date;
     private String name;
     private LocalTime hourBirth;
     private String gift;
     private String description;
 
-    public Birthday(LocalDate date, String name, LocalTime hourBirth, String gift, String description) {
+    public Birthday(UUID id, LocalDate date, String name, LocalTime hourBirth, String gift, String description) {
+        this.id = id;
         this.date = date;
         this.name = name;
         this.hourBirth = hourBirth;
         this.gift = gift;
         this.description = description;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public LocalDate getDate(){
