@@ -15,9 +15,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.UUID;
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+
 
 public class Main {
     public static void main(String[] args) {
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        System.setErr(new PrintStream(System.err, true, StandardCharsets.UTF_8));
         Map<UUID, Birthday> birthdayMap = new HashMap<>();
         Map<UUID, Meeting> meetingMap = new HashMap<>();
 

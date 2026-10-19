@@ -11,9 +11,9 @@ public class BirthdayInMemoryRepository implements BirthdayRepository {
         this.data = data;
     }
 
-    public BirthdayInMemoryRepository() {
-        this.data = new HashMap<>();
-    }
+    /* public BirthdayInMemoryRepository() {
+      this.data = new HashMap<>();
+    } */
 
     @Override
     public Birthday create(Birthday birthday) {
